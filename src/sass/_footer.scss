@@ -1,0 +1,19 @@
+.footer {
+  color: map-get($color-greys, light);
+  font-size: 1.2rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  &__link {
+    text-decoration: none;
+    color: $color-red;
+    transition: 300ms;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
