@@ -5,12 +5,13 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir ./dist"
+    "build": "parcel build index.html --out-dir ./out"
   },
   "author": "AH",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "sass": "^1.32.8"
   },
   "dependencies": {
     "chart.js": "^2.9.4",

@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   overflow-x: auto;
-  
+
   &__label-container {
     display: flex;
     width: 100%;
@@ -39,7 +39,7 @@
       justify-content: flex-start;
     }
   }
-  
+
   &__list {
     width: 100%;
     max-width: 1000px;
@@ -56,6 +56,10 @@
     border-bottom: 1.5px solid map-get($color-greys, mid-2);
     border-left: 1.5px solid map-get($color-greys, mid-2);
     border-right: 1.5px solid map-get($color-greys, mid-2);
+
+    &:hover {
+      background: map-get($color-greys, mid-1);
+    }
 
     &:last-child {
       border-bottom-left-radius: 18px;
@@ -84,6 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    cursor: pointer;
   }
 }
 
@@ -103,7 +108,7 @@
     display: flex;
     flex-direction: column;
     width: 10rem;
-  
+
     label {
       font-size: 1.3rem;
       cursor: pointer;
@@ -111,7 +116,7 @@
       text-transform: capitalize;
     }
   }
-  
+
   &__selected {
     position: relative;
     color: map-get($color-greys, x-light);
@@ -134,7 +139,7 @@
     height: 100%;
     transition: all 0.4s;
   }
-  
+
   &__options-container {
     background: map-get($color-greys, mid-2);
     color: $color-white;
@@ -146,28 +151,28 @@
     order: 1;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-  
+
     &.ranked__options-container--active {
       max-height: 240px;
       opacity: 1;
     }
-  
+
     &.ranked__options-container--active + .ranked__selected > .ranked__svg {
       transform: rotate(180deg);
     }
   }
-  
+
   &__option {
     padding: 0.9rem;
     text-align: start;
     user-select: none;
     cursor: pointer;
-  
+
     &:hover {
       background: map-get($color-greys, mid-3);
     }
   }
-  
+
   &__radio {
     display: none;
   }
@@ -182,32 +187,31 @@
   flex-wrap: wrap;
 
   &__btn {
-    font-family: 'Poppins', sans-serif;
-    color: $color-white;
-    padding: 6px;
-    outline: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border 250ms;
-    
+    font-family: "Poppins", sans-serif;
+    color: $color-white;
+    background: transparent;
+    padding: 6px;
     margin-top: 5px;
     margin-right: 5px;
-    border-radius: 5px;
-    background: transparent;
+    outline: none;
     border: 1.5px solid $color-red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 250ms;
 
     &:hover {
       border: 1.5px solid $color-white;
     }
-    
+
     &--text {
       width: 50px;
     }
 
     &--num {
-      width: 30px;
+      width: 35px;
     }
 
     &--active {

@@ -56,6 +56,7 @@ const createCovidDataObject = function (countryData, histData) {
       deaths: countryData.deaths,
       recovered: countryData.recovered,
       active: countryData.active,
+      critical: countryData.critical,
       tests: countryData.tests
     },
     hist: {
@@ -78,7 +79,6 @@ export const loadCountryData = async function (query) {
     state.covidData = createCovidDataObject(countryData, histData);
 
   } catch (err) {
-    console.log(err);
     throw err;
   }
 };
@@ -89,7 +89,6 @@ export const loadRankings = async function () {
     state.rankings.data = rankingData;
     state.rankings.pagination.numPages = Math.ceil(state.rankings.data.length / state.rankings.pagination.dataPerPage);
   } catch (err) {
-    console.log(err);
     throw err;
   }
 };
