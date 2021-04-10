@@ -1,33 +1,35 @@
 class SearchView {
-  _parentElement = document.querySelector('.search');
-  _searchField = document.querySelector('.search__field');
-  _searchBtn = document.querySelector('.search__btn');
-  _searchClear = document.querySelector('.search__clear');
+  _parentElement = document.querySelector(".search");
+  _searchField = document.querySelector(".search__field");
+  _searchBtn = document.querySelector(".search__btn");
+  _searchClear = document.querySelector(".search__clear");
 
   addHandlerFocus(handler) {
-    ['focusin', 'focusout'].forEach(ev => this._searchField.addEventListener(ev, () => handler(ev)));
+    ["focusin", "focusout"].forEach((ev) =>
+      this._searchField.addEventListener(ev, () => handler(ev))
+    );
   }
 
   addHandlerInput(handler) {
-    this._searchField.addEventListener('input', function (e) {
+    this._searchField.addEventListener("input", function (e) {
       e.preventDefault();
       handler();
     });
   }
 
   addHandlerSubmit(handler) {
-    this._parentElement.addEventListener('submit', function (e) {
+    this._parentElement.addEventListener("submit", function (e) {
       e.preventDefault();
       handler();
     });
   }
 
   addHandlerSearchClick(handler) {
-    this._searchBtn.addEventListener('mousedown', handler);
+    this._searchBtn.addEventListener("mousedown", () => handler());
   }
 
   addHandlerReset(handler) {
-    this._searchClear.addEventListener('mousedown', function (e) {
+    this._searchClear.addEventListener("mousedown", function (e) {
       e.preventDefault();
       handler();
     });
@@ -38,7 +40,7 @@ class SearchView {
     return query;
   }
 
-  setQuery(newValue = '') {
+  setQuery(newValue = "") {
     this._searchField.value = newValue;
   }
 
