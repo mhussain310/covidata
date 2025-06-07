@@ -1,0 +1,197 @@
+.card-2 {
+  width: 320px;
+  height: auto;
+  background: $dark-gradient;
+  border-radius: 18px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    padding: 20px 20px 0 20px;
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-red;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  &__total {
+    font-weight: bold;
+  }
+
+  &__list {
+    list-style: none;
+    color: $color-white;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 1.8rem;
+    // fill: $color-red;
+
+    &--cases {
+      fill: $color-light-blue;
+    }
+
+    &--deaths {
+      fill: $color-light-red;
+    }
+
+    &--recovered {
+      fill: $color-light-green;
+    }
+
+    &--active {
+      fill: rgb(255, 255, 53);
+    }
+
+    &--critical {
+      fill: rgb(255, 117, 53);
+    }
+
+    &--tests {
+      fill: rgb(17, 118, 7);
+    }
+  }
+
+  &__label {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: map-get($color-greys, x-light);
+  }
+
+  &__number {
+    letter-spacing: 0.1rem;
+  }
+
+  &__btn-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+  }
+
+  &__rankings-btn {
+    font-size: 1.3rem;
+    width: 120px;
+    margin-bottom: 5px;
+    @include btn-style;
+  }
+
+  &__precaution-btn {
+    font-size: 1.3rem;
+    width: 120px;
+    margin-bottom: 5px;
+    @include btn-style;
+  }
+
+  &-back {
+    position: absolute;
+    top: 0;
+    left: -100%; /*-100%*/
+    width: 100%; /*0*/
+    height: 100%;
+    padding: 20px;
+    background: $dark-gradient;
+    transition: 500ms;
+
+    &--active {
+      left: 0;
+    }
+
+    &__title-container {
+      color: $color-white;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 2px solid $color-red;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+
+    &__list {
+      list-style: none;
+      color: $color-white;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      font-size: 1.4rem;
+      fill: $color-red;
+    }
+
+    &__text {
+      font-size: 1.3rem;
+      padding-left: 6px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    &__btn {
+      font-size: 1.3rem;
+      width: 100px;
+      @include btn-style;
+
+      &-icon {
+        stroke: $color-white;
+        display: block;
+      }
+
+      &-text {
+        padding-left: 5px;
+      }
+
+      &--info {
+        @include btn-style;
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-white;
+      height: 100%;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+    }
+  }
+}

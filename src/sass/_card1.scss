@@ -1,0 +1,154 @@
+.card-1 {
+  width: 320px;
+  height: auto;
+  background: $dark-gradient;
+  border-radius: 18px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+
+  &__wrapper {
+    padding: 20px 20px 0 20px;
+  }
+
+  &__image-wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-red;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  &__country {
+    font-weight: bold;
+  }
+
+  &__abbr {
+    color: map-get($color-greys, light);
+  }
+
+  &__list {
+    list-style: none;
+    color: $color-white;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+
+  &__item {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 1.8rem;
+    fill: $color-red;
+  }
+
+  &__label {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: map-get($color-greys, x-light);
+  }
+
+  &__number {
+    letter-spacing: 0.1rem;
+  }
+}
+
+.daily {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $color-white;
+  background: map-get($color-greys, mid-3);
+
+  &-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+    background: map-get($color-greys, mid-2);
+
+    &__name {
+      color: $color-white;
+      font-size: 1.2rem;
+      letter-spacing: 0.2rem;
+    }
+
+    &__date-wrapper {
+      color: map-get($color-greys, light);
+      font-size: 1rem;
+    }
+
+    &__date-label {
+      padding-right: 2px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: map-get($color-greys, mid-3);
+  }
+
+  &__block--cases {
+    border-right: 2px solid map-get($color-greys, mid-2);
+  }
+
+  &__block--deaths {
+    border-right: 2px solid map-get($color-greys, mid-2);
+  }
+
+  &__value-container {
+    padding-bottom: 6px;
+    text-align: center;
+  }
+
+  &__value {
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &__percentage--red {
+    color: $color-light-red;
+  }
+
+  &__percentage--green {
+    color: $color-light-green;
+  }
+
+  &__percentage--hidden {
+    display: none;
+  }
+
+  &__percentage--shown {
+    display: inline;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    color: map-get($color-greys, x-light);
+  }
+}

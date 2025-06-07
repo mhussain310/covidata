@@ -1,0 +1,21 @@
+{
+  "name": "covidata",
+  "version": "1.0.0",
+  "description": "\"App containing data about covid around the world\"",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir ./out"
+  },
+  "author": "AH",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.4",
+    "core-js": "^3.9.0",
+    "regenerator-runtime": "^0.13.7"
+  }
+}

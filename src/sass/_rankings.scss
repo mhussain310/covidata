@@ -1,0 +1,222 @@
+.rankings-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rankings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+
+  &__label-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: map-get($color-greys, mid-2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 476px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  &__label {
+    flex: 1;
+    color: map-get($color-greys, x-light);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+
+    &--country {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 1000px;
+    min-width: 476px;
+  }
+
+  &__item {
+    list-style: none;
+    color: $color-white;
+    display: flex;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid map-get($color-greys, mid-2);
+    border-left: 1.5px solid map-get($color-greys, mid-2);
+    border-right: 1.5px solid map-get($color-greys, mid-2);
+
+    &:hover {
+      background: map-get($color-greys, mid-1);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // height: 40px;
+  }
+
+  &__flag {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  &__country {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+}
+
+.ranked {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  color: $color-white;
+  padding: 1.2rem;
+
+  &__label {
+    font-size: 1.3rem;
+    color: map-get($color-greys, x-light);
+  }
+
+  &__select-box {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+
+    label {
+      font-size: 1.3rem;
+      cursor: pointer;
+      pointer-events: none;
+      text-transform: capitalize;
+    }
+  }
+
+  &__selected {
+    position: relative;
+    color: map-get($color-greys, x-light);
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    order: 0;
+    width: 100%;
+    max-width: 10rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  &__svg {
+    order: 2;
+    stroke: map-get($color-greys, x-light);
+    height: 100%;
+    transition: all 0.4s;
+  }
+
+  &__options-container {
+    background: map-get($color-greys, mid-2);
+    color: $color-white;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    order: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &.ranked__options-container--active {
+      max-height: 240px;
+      opacity: 1;
+    }
+
+    &.ranked__options-container--active + .ranked__selected > .ranked__svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__option {
+    padding: 0.9rem;
+    text-align: start;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background: map-get($color-greys, mid-3);
+    }
+  }
+
+  &__radio {
+    display: none;
+  }
+}
+
+.pagination {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    color: $color-white;
+    background: transparent;
+    padding: 6px;
+    margin-top: 5px;
+    margin-right: 5px;
+    outline: none;
+    border: 1.5px solid $color-red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 250ms;
+
+    &:hover {
+      border: 1.5px solid $color-white;
+    }
+
+    &--text {
+      width: 50px;
+    }
+
+    &--num {
+      width: 35px;
+    }
+
+    &--active {
+      background: linear-gradient(to top left, $color-red, rgb(188, 47, 47));
+      border: 1.5px solid $color-white;
+    }
+  }
+}

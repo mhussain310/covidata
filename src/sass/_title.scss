@@ -1,0 +1,32 @@
+.title {
+  display: block;
+  white-space: nowrap;
+  font-family: $font-title;
+  font-size: 6rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  user-select: none;
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &__start {
+    padding: none;
+    position: relative;
+    left: 1.8rem;
+  }
+
+  &__virus {
+    fill: $color-red;
+  }
+  
+  &__end {
+    padding: none;
+    position: relative;
+    right: 1.8rem;
+  }
+}

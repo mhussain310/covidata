@@ -1,0 +1,71 @@
+$color-white: rgb(245, 245, 247);
+$color-red: rgb(194, 11, 11);
+$color-light-red: rgb(255, 53, 53);
+$color-light-green: rgb(53, 255, 53);
+$color-light-blue: rgb(0, 132, 255);
+$color-greys: (
+  "x-light": rgb(180, 180, 180),
+  "light": rgb(110, 110, 110),
+  "mid-1": rgb(40, 40, 40),
+  "mid-2": rgb(30, 30, 30),
+  "mid-3": rgb(45, 45, 45),
+  "dark": rgb(22, 22, 22)
+);
+
+$dark-gradient: linear-gradient(to top left, rgb(33, 33, 33), rgb(35, 35, 35));
+
+$font-title: 'RocknRoll One', sans-serif;
+$font-primary: 'Poppins', sans-serif;
+
+$search-list-height: 250px;
+
+@mixin position-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin btn-style {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to top left, $color-red, rgb(188, 47, 47));
+  color: $color-white;
+  padding: 6px;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 3px 8px rgb(26, 26, 26);
+  transition: border 250ms;
+
+  &:hover {
+    border: 1px solid $color-white;
+  }
+}
+
+@mixin media-small {
+  @media only screen and (max-width: 400px) {
+    @content
+  }
+}
+
+@mixin media-medium {
+  @media only screen and (max-width: 683px) {
+    @content
+  }
+}
+
+@mixin media-large {
+  @media only screen and (max-width: 1333px) {
+    @content
+  }
+}
